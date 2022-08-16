@@ -1,0 +1,922 @@
+{
+    "name": "algolia",
+    "description": "A Pulumi package for creating and managing algolia cloud resources.",
+    "keywords": [
+        "pulumi",
+        "algolia",
+        "category/cloud"
+    ],
+    "homepage": "https://www.pulumi.com",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`algolia` Terraform Provider](https://github.com/jlmanaloto/terraform-provider-algolia).",
+    "repository": "https://github.com/swarm-work/pulumi-algolia",
+    "publisher": "Swarm Work",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "language": {
+        "nodejs": {
+            "compatibility": "tfbridge20",
+            "disableUnionOutputTypes": true,
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/jlmanaloto/terraform-provider-algolia)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-algolia` repo](https://github.com/swarm-work/pulumi-algolia/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-algolia` repo](https://github.com/jlmanaloto/terraform-provider-algolia/issues)."
+        },
+        "python": {
+            "compatibility": "tfbridge20",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/jlmanaloto/terraform-provider-algolia)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-algolia` repo](https://github.com/swarm-work/pulumi-algolia/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-algolia` repo](https://github.com/jlmanaloto/terraform-provider-algolia/issues).",
+            "requires": {
+                "pulumi": "\u003e=3.0.0,\u003c4.0.0"
+            }
+        }
+    },
+    "config": {
+        "variables": {
+            "apiKey": {
+                "type": "string",
+                "description": "The API key\n"
+            },
+            "applicationId": {
+                "type": "string",
+                "description": "The Algolia application ID\n"
+            }
+        },
+        "defaults": [
+            "apiKey",
+            "applicationId"
+        ]
+    },
+    "types": {
+        "algolia:index/getIndexSetting:getIndexSetting": {
+            "properties": {
+                "advancedSyntax": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "advancedSyntaxFeatures": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "allowCompressionOfIntegerArray": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "allowTyposOnNumericTokens": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "alternativesAsExacts": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributeCriteriaComputedByMinProximity": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributeForDistinct": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributesForFacetings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributesToHighlights": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributesToRetrieves": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "attributesToSnippets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "camelCaseAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "customRankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "disableExactOnAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "disablePrefixOnAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "disableTypoToleranceOnAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "disableTypoToleranceOnWords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "distinct": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "enablePersonalization": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "enableRules": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "exactOnSingleWordQuery": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "hitsPerPage": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "indexLanguages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "maxFacetHits": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "maxValuesPerFacet": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "minProximity": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "minWordSizefor1Typo": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "minWordSizefor2Typos": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "numericAttributesForFilterings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "optionalWords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "paginationLimitedTo": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "primary": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "queryLanguages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "queryType": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "rankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "removeWordsIfNoResults": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "replaceSynonymsInHighlight": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "replicas": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "restrictHighlightAndSnippetArrays": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "searchableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "separatorsToIndex": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "snippetEllipsisText": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "sortFacetValuesBy": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "unretrievableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "advancedSyntax",
+                "advancedSyntaxFeatures",
+                "allowCompressionOfIntegerArray",
+                "allowTyposOnNumericTokens",
+                "alternativesAsExacts",
+                "attributeCriteriaComputedByMinProximity",
+                "attributeForDistinct",
+                "attributesForFacetings",
+                "attributesToHighlights",
+                "attributesToRetrieves",
+                "attributesToSnippets",
+                "camelCaseAttributes",
+                "customRankings",
+                "disableExactOnAttributes",
+                "disablePrefixOnAttributes",
+                "disableTypoToleranceOnAttributes",
+                "disableTypoToleranceOnWords",
+                "distinct",
+                "enablePersonalization",
+                "enableRules",
+                "exactOnSingleWordQuery",
+                "hitsPerPage",
+                "indexLanguages",
+                "maxFacetHits",
+                "maxValuesPerFacet",
+                "minProximity",
+                "minWordSizefor1Typo",
+                "minWordSizefor2Typos",
+                "numericAttributesForFilterings",
+                "optionalWords",
+                "paginationLimitedTo",
+                "primary",
+                "queryLanguages",
+                "queryType",
+                "rankings",
+                "removeWordsIfNoResults",
+                "replaceSynonymsInHighlight",
+                "replicas",
+                "restrictHighlightAndSnippetArrays",
+                "searchableAttributes",
+                "separatorsToIndex",
+                "snippetEllipsisText",
+                "sortFacetValuesBy",
+                "unretrievableAttributes"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        }
+    },
+    "provider": {
+        "description": "The provider type for the algolia package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n",
+        "properties": {
+            "apiKey": {
+                "type": "string",
+                "description": "The API key\n"
+            },
+            "applicationId": {
+                "type": "string",
+                "description": "The Algolia application ID\n"
+            }
+        },
+        "required": [
+            "apiKey",
+            "applicationId"
+        ],
+        "inputProperties": {
+            "apiKey": {
+                "type": "string",
+                "description": "The API key\n"
+            },
+            "applicationId": {
+                "type": "string",
+                "description": "The Algolia application ID\n"
+            }
+        },
+        "requiredInputs": [
+            "apiKey",
+            "applicationId"
+        ]
+    },
+    "resources": {
+        "algolia:index/apiKey:ApiKey": {
+            "properties": {
+                "acls": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "indexes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "key": {
+                    "type": "string"
+                },
+                "maxHitsPerQuery": {
+                    "type": "integer"
+                },
+                "maxQueriesPerIpPerHour": {
+                    "type": "integer"
+                },
+                "referers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "validity": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "acls",
+                "description",
+                "indexes",
+                "key",
+                "referers"
+            ],
+            "inputProperties": {
+                "acls": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                },
+                "indexes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "maxHitsPerQuery": {
+                    "type": "integer"
+                },
+                "maxQueriesPerIpPerHour": {
+                    "type": "integer"
+                },
+                "referers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "validity": {
+                    "type": "integer"
+                }
+            },
+            "requiredInputs": [
+                "acls",
+                "description"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering ApiKey resources.\n",
+                "properties": {
+                    "acls": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "indexes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "key": {
+                        "type": "string"
+                    },
+                    "maxHitsPerQuery": {
+                        "type": "integer"
+                    },
+                    "maxQueriesPerIpPerHour": {
+                        "type": "integer"
+                    },
+                    "referers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "validity": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "algolia:index/index:Index": {
+            "properties": {
+                "attributeForDistinct": {
+                    "type": "string"
+                },
+                "attributesForFacetings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "attributesToRetrieves": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customRankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "distinct": {
+                    "type": "integer"
+                },
+                "hitsPerPage": {
+                    "type": "integer"
+                },
+                "maxValuesPerFacet": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "paginationLimitedTo": {
+                    "type": "integer"
+                },
+                "rankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "replicas": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "searchableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sortFacetValuesBy": {
+                    "type": "string"
+                },
+                "unretrievableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "attributesForFacetings",
+                "attributesToRetrieves",
+                "customRankings",
+                "name",
+                "rankings",
+                "replicas",
+                "searchableAttributes",
+                "unretrievableAttributes"
+            ],
+            "inputProperties": {
+                "attributeForDistinct": {
+                    "type": "string"
+                },
+                "attributesForFacetings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "attributesToRetrieves": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "customRankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "distinct": {
+                    "type": "integer"
+                },
+                "hitsPerPage": {
+                    "type": "integer"
+                },
+                "maxValuesPerFacet": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "paginationLimitedTo": {
+                    "type": "integer"
+                },
+                "rankings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "replicas": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "searchableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sortFacetValuesBy": {
+                    "type": "string"
+                },
+                "unretrievableAttributes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Index resources.\n",
+                "properties": {
+                    "attributeForDistinct": {
+                        "type": "string"
+                    },
+                    "attributesForFacetings": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "attributesToRetrieves": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "customRankings": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "distinct": {
+                        "type": "integer"
+                    },
+                    "hitsPerPage": {
+                        "type": "integer"
+                    },
+                    "maxValuesPerFacet": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "paginationLimitedTo": {
+                        "type": "integer"
+                    },
+                    "rankings": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "replicas": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "searchableAttributes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "sortFacetValuesBy": {
+                        "type": "string"
+                    },
+                    "unretrievableAttributes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "functions": {
+        "algolia:index/getIndex:getIndex": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getIndex.\n",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getIndex.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "settings": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/algolia:index/getIndexSetting:getIndexSetting"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "settings",
+                    "id"
+                ]
+            }
+        }
+    }
+}
