@@ -16,7 +16,7 @@ pip install sw_pulumi_algolia
 
 ## Configuration
 
-The following configuration points are available for the `foo` provider:
+The following configuration points are available for the `Algolia` provider:
 
 - `algolia:apiKey` - (Required) the admin API key from your algolia account.
 - `algolia:applicationId` - (Required) the application ID from your algolia account.
