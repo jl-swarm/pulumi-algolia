@@ -8,14 +8,14 @@ from setuptools.command.install import install
 from subprocess import check_call
 
 
-VERSION = "0.1.0"
-PLUGIN_VERSION = "0.1.0"
+VERSION = "0.1.1"
+PLUGIN_VERSION = "0.1.1"
 
 class InstallPluginCommand(install):
     def run(self):
         install.run(self)
         try:
-            check_call(['pulumi', 'plugin', 'install', 'resource', 'algolia', PLUGIN_VERSION])
+            pass
         except OSError as error:
             if error.errno == errno.ENOENT:
                 print(f"""
@@ -61,6 +61,5 @@ setup(name='sw_pulumi_algolia',
       install_requires=[
           'parver>=0.2.1',
           'pulumi>=3.0.0,<4.0.0',
-          'semver>=2.8.1'
       ],
       zip_safe=False)
